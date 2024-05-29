@@ -42,12 +42,12 @@ public class BaseClass {
 		dutil.ToGetDataBaseConnection();
 	}
 	
-	@Parameters("BROWSER")
+	//@Parameters("BROWSER")
 	@BeforeClass
-	public void launchTheBrowser(String bname) throws Throwable {
+	public void launchTheBrowser(/*String bname*/) throws Throwable {
 		
-		String BROWSER = bname;
-		//putil.ToReadDataFromPropertyFile("browser");
+		String BROWSER = putil.ToReadDataFromPropertyFile("browser");
+		//;bname
 		
 		if(BROWSER.equals("chrome")) {
 			driver=new ChromeDriver();
