@@ -46,7 +46,7 @@ public class BaseClass {
 	@BeforeClass
 	public void launchTheBrowser(/*String bname*/) throws Throwable {
 		
-		String BROWSER = putil.ToReadDataFromPropertyFile("browser");
+		String BROWSER = System.getProperty("browser",putil.ToReadDataFromPropertyFile("browser"));
 		//;bname
 		
 		if(BROWSER.equals("chrome")) {
