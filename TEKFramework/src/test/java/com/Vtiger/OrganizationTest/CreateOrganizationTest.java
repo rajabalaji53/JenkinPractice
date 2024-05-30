@@ -86,6 +86,7 @@ public class CreateOrganizationTest extends BaseClass{
 
 		// click on save button
 		cop.getSaveButton().click();
+		System.out.println("Clicked on save button successfully");
 
 		// verify the header organization name
 		OrganizationInformationPage oip=new OrganizationInformationPage(driver);
