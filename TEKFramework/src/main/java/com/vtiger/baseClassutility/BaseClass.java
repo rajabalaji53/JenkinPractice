@@ -67,7 +67,7 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void toLogin() throws Throwable {
-		String URL = System.getProperty("browser",putil.ToReadDataFromPropertyFile("url"));
+		String URL = System.getProperty("url",putil.ToReadDataFromPropertyFile("url"));
 		String USERNAME = System.getProperty("username",putil.ToReadDataFromPropertyFile("username"));
 		String PASSWORD = System.getProperty("Password",putil.ToReadDataFromPropertyFile("password"));
 		
