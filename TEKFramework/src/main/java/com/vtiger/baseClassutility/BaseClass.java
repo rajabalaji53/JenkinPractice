@@ -67,9 +67,9 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void toLogin() throws Throwable {
-		String URL = putil.ToReadDataFromPropertyFile("url");
-		String USERNAME = putil.ToReadDataFromPropertyFile("username");
-		String PASSWORD = putil.ToReadDataFromPropertyFile("password");
+		String URL = System.getProperty("browser",putil.ToReadDataFromPropertyFile("url"));
+		String USERNAME = System.getProperty("username",putil.ToReadDataFromPropertyFile("username"));
+		String PASSWORD = System.getProperty("Password",putil.ToReadDataFromPropertyFile("password"));
 		
 		driver.get(URL);
 		System.out.println("URL launched successfully");
